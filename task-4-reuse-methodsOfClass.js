@@ -15,7 +15,7 @@
 
 // РЕШЕНИЕ //
 
-// Write code under this line
+// // Write code under this line
 class StringBuilder {
   constructor(value) {
     this._value = value;
@@ -31,7 +31,9 @@ class StringBuilder {
   }
 
   pad(str) {
-    return (this._value = str + this._value + str);
+    this.append(str);
+    this.prepend(str);
+    // return (this._value = str + this._value + str);
   }
 }
 
