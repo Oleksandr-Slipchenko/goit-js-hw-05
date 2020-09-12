@@ -153,11 +153,12 @@ class Car {
     return this.speed;
   }
   decelerate(value) {
-    if (this.speed > 0) {
-      this.speed -= value;
-    } else if (this.speed + value > 0) {
-      this.speed = 0;
-    }
+    this.speed - value >= 0 ? (this.speed -= value) : (this.speed = 0);
+    // if (this.speed > 0) {
+    //   this.speed -= value;
+    // } else if (this.speed + value > 0) {
+    //   this.speed = 0;
+    // }
   }
   drive(hours) {
     if (this.isOn === true) {
